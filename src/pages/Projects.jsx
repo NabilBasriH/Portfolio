@@ -4,7 +4,7 @@ const projects = [
   {
     title: 'Juice App',
     description: 'An application that lets users browse a variety of juices 🧃',
-    image: '/Portfolio/images/juice_app.png',
+    image: `${import.meta.env.BASE_URL}images/juice_app.png`,
     link: 'https://github.com/NabilBasriH/Juice-App',
     tech: [
       { type: 'icon', element: <FaAndroid title="Android" className="text-green-500" /> },
@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'Climat',
     description: "Application that shows the current weather and nearby cities based on the user's location. 🌤️",
-    image: '/Portfolio/images/climat.png',
+    image: `${import.meta.env.BASE_URL}images/climat.png`,
     link: 'https://github.com/NabilBasriH/Climat-App',
     tech: [
       { type: 'icon', element: <FaAndroid title="Android" className="text-green-500" /> },
