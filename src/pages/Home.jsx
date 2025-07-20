@@ -13,7 +13,7 @@ export default function Home() {
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Hi, I'm Nabil Basri Hamdaoui</h2>
         <p className="text-base md:text-lg">A mobile app developer specializing in Kotlin, Jetpack Compose, and Android Studio.</p>
         <a 
-          href="/cv.pdf" 
+          href="/Portfolio/cv.pdf" 
           download
           target="_blank"
           rel="noopener noreferrer"

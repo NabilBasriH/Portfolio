@@ -18,7 +18,7 @@ const projects = [
     link: 'https://github.com/NabilBasriH/Climat-App',
     tech: [
       { type: 'icon', element: <FaAndroid title="Android" className="text-green-500" /> },
-      { type: 'image', src: '/logos/a.png', alt: 'XML Views' }
+      { type: 'image', src: '/logos/xml.png', alt: 'XML Views' }
     ]
   }
 ];
