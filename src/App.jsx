@@ -8,10 +8,10 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Portfolio">
       <div className="font-sans bg-gray-900 text-white min-h-screen flex flex-col overflow-x-hidden">
         <Navbar />
-        <main className="flex flex-1 flex-col"> {/* 👈 Agregado: 'flex' */}
+        <main className="flex flex-1 flex-col">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -19,7 +19,6 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        
       </div>
     </Router>
   );
