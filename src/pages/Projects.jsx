@@ -8,7 +8,7 @@ const projects = [
     link: 'https://github.com/NabilBasriH/Juice-App',
     tech: [
       { type: 'icon', element: <FaAndroid title="Android" className="text-green-500" /> },
-      { type: 'image', src: '/logos/compose.png', alt: 'Jetpack Compose' }
+      { type: 'image', src: '/Portfolio/logos/compose.png', alt: 'Jetpack Compose' }
     ]
   },
   {
@@ -18,7 +18,7 @@ const projects = [
     link: 'https://github.com/NabilBasriH/Climat-App',
     tech: [
       { type: 'icon', element: <FaAndroid title="Android" className="text-green-500" /> },
-      { type: 'image', src: '/logos/xml.png', alt: 'XML Views' }
+      { type: 'image', src: '/Portfolio/logos/xml.png', alt: 'XML Views' }
     ]
   }
 ];
