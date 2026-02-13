@@ -1,54 +1,74 @@
+import { motion } from 'framer-motion';
 import { FaAndroid } from 'react-icons/fa';
 
 const projects = [
   {
     title: 'Juice App',
-    description: 'An application that lets users browse a variety of juices 🧃',
+    description: 'A shopping-style app that lets users explore a catalog of juices in a fast, mobile-first experience.',
     image: `${import.meta.env.BASE_URL}images/juice_app.png`,
     link: 'https://github.com/NabilBasriH/Juice-App',
     tech: [
-      { type: 'icon', element: <FaAndroid title="Android" className="text-green-500" /> },
-      { type: 'image', src: '/Portfolio/logos/compose.png', alt: 'Jetpack Compose' }
-    ]
+      { type: 'icon', element: <FaAndroid title="Android" className="text-lime-400" /> },
+      { type: 'image', src: `${import.meta.env.BASE_URL}logos/compose.png`, alt: 'Jetpack Compose' }
+    ],
+    impact: 'Compose UI architecture and reusable components'
   },
   {
     title: 'Climat',
-    description: "Application that shows the current weather and nearby cities based on the user's location. 🌤️",
+    description: 'Weather app showing current conditions and nearby cities based on device location.',
     image: `${import.meta.env.BASE_URL}images/climat.png`,
     link: 'https://github.com/NabilBasriH/Climat-App',
     tech: [
-      { type: 'icon', element: <FaAndroid title="Android" className="text-green-500" /> },
-      { type: 'image', src: '/Portfolio/logos/xml.png', alt: 'XML Views' }
-    ]
+      { type: 'icon', element: <FaAndroid title="Android" className="text-lime-400" /> },
+      { type: 'image', src: `${import.meta.env.BASE_URL}logos/xml.png`, alt: 'XML Views' }
+    ],
+    impact: 'Location-based weather flow and clean XML UI structure'
   }
 ];
 
 export default function Projects() {
   return (
-    <section className="flex-1 flex items-center justify-center px-4">
-      <div className="w-full max-w-6xl">
-        <h2 className="text-3xl font-semibold text-center mb-8">Projects</h2>
+    <section className="w-full py-10 sm:py-14">
+      <div className="section-shell">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.6 }}
+          className="mb-8"
+        >
+          <p className="text-sm uppercase tracking-[0.2em] text-cyan-300">Projects</p>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold">Selected Android work</h2>
+        </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="border border-gray-700 rounded-lg overflow-hidden shadow-md bg-gray-800 w-full max-w-md mx-auto flex flex-col items-center"
+            <motion.article
+              key={project.title}
+              className="glass-panel rounded-3xl overflow-hidden border border-slate-600/40"
+              initial={{ opacity: 0, y: 26 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.55, delay: index * 0.1 }}
+              whileHover={{ y: -6 }}
             >
-              <div className="relative w-full h-52 bg-gray-800 flex items-center justify-center">
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                <div className="p-6 border-b border-slate-700/40 flex items-center gap-4">
                   <img
                     src={project.image}
-                    alt={`${project.title} mockup`}
-                    className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-cover rounded-2xl shadow-lg"
+                    alt={`${project.title} preview`}
+                    className="w-20 h-20 object-cover rounded-2xl border border-slate-600/50"
                   />
-                </a>
-              </div>
-              <div className="p-4 flex flex-col items-center text-center">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-sm mb-4 max-h-[4.5rem] overflow-hidden">
-                  {project.description}
-                </p>
-                <div className="flex items-center space-x-4 mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold">{project.title}</h3>
+                    <p className="text-xs uppercase tracking-[0.14em] text-cyan-300 mt-1">Open Project</p>
+                  </div>
+                </div>
+              </a>
+              <div className="p-6">
+                <p className="text-slate-300 leading-relaxed">{project.description}</p>
+                <p className="mt-4 text-sm text-lime-300">{project.impact}</p>
+                <div className="mt-5 flex items-center gap-4">
                   {project.tech.map((tech, i) =>
                     tech.type === 'icon' ? (
                       <span key={i} className="text-2xl">{tech.element}</span>
@@ -64,7 +84,7 @@ export default function Projects() {
                   )}
                 </div>
               </div>
-            </div>
+            </motion.article>
           ))}
         </div>
       </div>

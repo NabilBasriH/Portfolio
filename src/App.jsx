@@ -9,9 +9,10 @@ import Footer from './components/Footer';
 function App() {
   return (
     <Router basename="/Portfolio">
-      <div className="font-sans bg-gray-900 text-white min-h-screen flex flex-col overflow-x-hidden">
+      <div className="min-h-screen flex flex-col overflow-x-hidden relative">
+        <div className="absolute inset-0 grid-noise pointer-events-none" />
         <Navbar />
-        <main className="flex flex-1 flex-col">
+        <main className="flex flex-1 flex-col pt-8 pb-12">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -19,6 +20,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
