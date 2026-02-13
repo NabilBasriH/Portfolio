@@ -28,7 +28,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="w-full py-10 sm:py-14">
+    <section className="page-section">
       <div className="section-shell">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

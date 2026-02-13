@@ -9,7 +9,7 @@ const fadeUp = {
 
 export default function Home() {
   return (
-    <section className="w-full py-10 sm:py-14">
+    <section className="page-section">
       <div className="section-shell">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div {...fadeUp}>

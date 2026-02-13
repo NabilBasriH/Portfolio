@@ -25,10 +25,17 @@ html, body, #root {
   min-height: 100%;
 }
 
+html {
+  background-color: #040a10;
+  overscroll-behavior-y: none;
+}
+
 body {
   margin: 0;
   color: var(--text);
   font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+  background-color: #040a10;
   background:
     radial-gradient(circle at 18% 10%, rgba(41, 211, 230, 0.18), transparent 42%),
     radial-gradient(circle at 78% 2%, rgba(139, 245, 123, 0.1), transparent 30%),
@@ -45,6 +52,11 @@ a {
 
 .section-shell {
   @apply w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.page-section {
+  @apply w-full py-10 sm:py-14 flex items-center;
+  min-height: calc(100svh - 8rem);
 }
 
 .glass-panel {
