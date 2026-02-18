@@ -45,6 +45,40 @@ export default function About() {
             </motion.article>
           ))}
         </div>
+
+        <motion.article
+          className="glass-panel rounded-3xl p-6 sm:p-8 mt-6 border border-cyan-300/25"
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.55, delay: 0.15 }}
+        >
+          <p className="text-sm uppercase tracking-[0.2em] text-cyan-300">Certification</p>
+          <h3 className="mt-2 text-2xl font-bold text-slate-100">
+            Jetpack Compose - Complete Course from Scratch (2023)
+          </h3>
+          <p className="mt-3 text-slate-300">
+            Certificate of completion for AristiDevs&apos; AppCademy Jetpack Compose course.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href={`${import.meta.env.BASE_URL}certificates/jetpack-compose-appcademy-certificate.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 rounded-full bg-cyan-400 text-slate-950 font-semibold hover:bg-cyan-300 transition-colors"
+            >
+              View Certificate (PDF)
+            </a>
+            <a
+              href="https://www.appcademy.dev/jetpack-compose-curso-definitivo-desde-0-2023"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 rounded-full border border-cyan-300/40 text-slate-100 hover:border-cyan-300 hover:text-cyan-300 transition-colors"
+            >
+              View Course
+            </a>
+          </div>
+        </motion.article>
       </div>
     </section>
   );
